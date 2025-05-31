@@ -57,7 +57,13 @@ class Calculator {
                     strArray.push(toPushString);
                 }
                 else {
-                    strArray.push(str[i]);
+                    try{
+                         if (!['(',')','+','-','*','/'].includes(str[i])) throw "you have entered an alphabet instead of a number"
+                        strArray.push(str[i]);
+                    }
+                    catch (message){
+                        console.log(message);
+                    }
                 }
 
             }
@@ -158,4 +164,4 @@ function operation(operator, operand1, operand2) {
     return result;
 }
 const calc = new Calculator(0);
-Calculator.calculate(`10 +   2 *    (   6 - (4 + 1) / 2) + 7`);
+Calculator.calculate(`a +   2 *    (   6 - (4 + 1) / 2) + 7`); 
