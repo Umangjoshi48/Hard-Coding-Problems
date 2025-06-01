@@ -1,5 +1,5 @@
 class Calculator {
-    constructor(result) {
+    constructor(result = 0) {
         this.result = result;
     }
     add(num) {
@@ -14,21 +14,25 @@ class Calculator {
         this.result = this.result * num;
         return this.result;
     }
-    divide(num) {
+    divide(num) { 
+
+        if (num==0) 
+        {
+            throw new Error("please enter a number greater than 0");
+        }
         this.result = this.result / num;
         return this.result;
     }
     getResult() {
         return this.result;
     }
-    updateResult(num){
+    static updateResult(num) {
         this.result = num;
     }
-    clear()
-    {
-        this.result=0;
+    clear() {
+        this.result = 0;
     }
-    static calculate(str) {
+    calculate(str) {
         let strArray = [];
         for (let i = 0; i < str.length; i++) {
 
@@ -57,11 +61,11 @@ class Calculator {
                     strArray.push(toPushString);
                 }
                 else {
-                    try{
-                         if (!['(',')','+','-','*','/'].includes(str[i])) throw "you have entered an alphabet instead of a number"
+                    try {
+                        if (!['(', ')', '+', '-', '*', '/'].includes(str[i])) throw "you have entered an alphabet instead of a number";
                         strArray.push(str[i]);
                     }
-                    catch (message){
+                    catch (message) {
                         console.log(message);
                     }
                 }
@@ -143,7 +147,7 @@ function calculateExpression(postFix) {
 }
 function operation(operator, operand1, operand2) {
     let result;
-    calc.updateResult(operand1);
+    Calculator.updateResult(operand1);
     switch (operator) {
         case '+':
             result = calc.add(operand2);
@@ -152,8 +156,7 @@ function operation(operator, operand1, operand2) {
             result = calc.subtract(operand2);
             break;
         case '*':
-            result=calc.multiply(operand2);
-            
+            result = calc.multiply(operand2);
             break;
         case '/':
             result = calc.divide(operand2);
@@ -163,5 +166,4 @@ function operation(operator, operand1, operand2) {
     }
     return result;
 }
-const calc = new Calculator(0);
-Calculator.calculate(`a +   2 *    (   6 - (4 + 1) / 2) + 7`); 
+module.exports = Calculator;
