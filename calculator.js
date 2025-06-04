@@ -1,5 +1,5 @@
-/* The problems calculator.js and expenditure-analysis.js, along with their test cases, are from the public repository 100xdevs-cohort-2 by 
-Harkirat Singh—a well-known software developer, teacher, and YouTuber. I’m solving these assignments as part of the 100xDevs Cohort 0→1, 
+/* The problem calculator.js,along with it's test cases, are from the public repository 100xdevs-cohort-2 by Harkirat Singh—a well-known software developer, 
+teacher, and YouTuber. I’m solving these assignments as part of the 100xDevs Cohort 0→1, 
 which I’ve enrolled in.*/
 
 /*
