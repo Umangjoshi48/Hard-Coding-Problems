@@ -1,7 +1,3 @@
-/* The problem calculator.js,along with it's test cases, are from the public repository 100xdevs-cohort-2 by Harkirat Singh—a well-known software developer, 
-teacher, and YouTuber. I’m solving these assignments as part of the 100xDevs Cohort 0→1, 
-which I’ve enrolled in.*/
-
 /*
   Implement a class `Calculator` having below methods
     - initialise a result variable in the constructor and keep updating it after every arithmetic operation
@@ -19,7 +15,6 @@ which I’ve enrolled in.*/
 
   Once you've implemented the logic, test your code by running
 */
-
 class Calculator {
     constructor(result = 0) {
         this.result = result;
@@ -199,3 +194,6 @@ class Calculator {
     }
 }
 module.exports = Calculator;
+/* The problem calculator.js,along with its test cases, are from the public repository 100xdevs-cohort-2 by Harkirat Singh—a well-known software developer, 
+teacher, and YouTuber. I’m solving these assignments as part of the 100xDevs Cohort 0→1, 
+which I’ve enrolled in.*/
