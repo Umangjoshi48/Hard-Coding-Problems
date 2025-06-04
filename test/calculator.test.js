@@ -122,3 +122,6 @@ describe('Calculator', () => {
 		expect(() => calc.calculate(')10 + 2(')).toThrow(Error);
 	});
 });
+/* This is a test for the calculator.js problem which is in the repository. This code is not written by me. 
+This is  from the public repository 100xdevs-cohort-2 by Harkirat Singh—a well-known software developer, teacher, and YouTuber. 
+I’m solving these assignments as part of the 100xDevs Cohort 0→1, which I’ve enrolled in.*/
